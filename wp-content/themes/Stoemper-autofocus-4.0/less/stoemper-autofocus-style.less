@@ -1,0 +1,805 @@
+/**
+ * LESS-CSS Overrides for Wordpresss to improve integration
+ * 
+ * @author mpeternell | http://mattpeternell.com
+ * @package Stoemper-autofocus-4.0
+ */
+
+@import "variables.less";
+
+
+/************ Embedded Fonts ***********************/
+@font-face {
+  font-family: 'DINBlackRegular';
+  src: url('../fonts/din_black.eot');
+  src: url('../fonts/din_black.eot?#iefix') format('embedded-opentype'),  url('../fonts/din_black.woff') format('woff'),  url('../fonts/din_black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/************** Site Structure *********************/
+.clearfix {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+body {
+  background-color: @base-body-color;
+  color: @base-font-color;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  color: @base-font-color;
+  font-family: @base-font-family;
+  font-size: 2.90em;
+  font-weight: normal;
+  text-align: left;
+  margin-bottom: 0.25em;
+  text-shadow: 2px 2px 3px @base-drop-shadow-color;
+}
+
+h2 {
+  color: @base-font-color;
+  font-family: @base-font-family;
+  font-size: 2.50em;
+  font-weight: normal;
+  margin-bottom: 0.50em;
+  text-align: left;
+  text-shadow: 2px 2px 3px @base-drop-shadow-color;
+}
+
+h3 {
+  font-family: @base-font-family;
+  font-size:2.20em;
+  font-weight: normal;
+  margin-bottom: 0.25em;
+  text-align:left;
+  color:@base-font-color;
+  text-shadow: 2px 2px 3px @base-drop-shadow-color;
+}
+h4 {
+  font-family: @base-font-family;
+  font-size:1.80em;
+  font-weight: normal;
+  margin-bottom: 0.25em;
+  text-align:left;
+  text-shadow: 2px 2px 3px #000000;
+  color:@base-font-color;
+}
+
+h5 {
+  font-family: @base-font-family;
+  font-size:1.90em;
+  font-weight: normal;
+  text-align:left;
+  color:@base-font-color;
+}
+
+h6 {
+  font-family: @base-font-family;
+  font-size:1.80em;
+  font-weight: normal;
+  text-align:left;
+  color:@base-font-color;
+}
+
+p {
+  color: @base-font-color;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: left;
+  margin: 0 0 1em 0;
+}
+
+li {
+  font-size: 1.15em;
+}
+
+a {
+  color: @base-link-color;
+  display: inline;
+}
+a:hover {
+  text-decoration: none;
+  color: @base-link-hover-color;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+abbr, acronym, abbr[title], acronym[title], dfn[title] {
+  text-transform: none;
+  border: none;
+  letter-spacing: inherit;
+  cursor: default;
+}
+
+#wrapper {
+    background-color: #111111;
+    display: block;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0;
+    position: relative;
+    width: 990px;
+    -webkit-box-shadow: 0px 5px 12px 0px rgba(50, 50, 50, 0.9);
+    -moz-box-shadow:    0px 5px 12px 0px rgba(50, 50, 50, 0.9);
+    box-shadow:         0px 5px 12px 0px rgba(50, 50, 50, 0.9);
+}
+
+#content {
+    padding: 9em 5em;
+    height: auto;
+    overflow: auto;
+    padding: 9em 3em;
+}
+
+/******************** WP Image Alignment ******************
+ *********************************************************/
+
+img {
+  margin: 0 0 1em 0;
+  clear: both;
+  float: none;
+  display: block;
+  &.alignleft {
+    margin: 1em 4em 1em 0;
+    clear: left;
+    float: left;
+  }
+  &.alignright {
+    margin: 1em 0 1em 4em;
+    clear: right;
+    float: right;
+  }
+  &.aligncenter {
+    margin: 1em auto;
+    position: relative;
+    clear: none;
+  }
+  &.alignnone {
+    margin: 1em 0 1em 0;
+    clear: both;
+    float: none;
+    display: block;
+  }
+}
+
+/***************** WP Img Caption ****************/
+.wp-caption {
+  overflow:auto;
+  .wp-caption-text {
+    font-style: italic;
+    text-align: center;
+  }
+  &.alignleft {
+    margin: 1em 4em 1em 0;
+    clear: left;
+    float: left;
+  }
+  &.alignright {
+    margin: 1em 0 4em 1em;
+    clear: right;
+    float: right;
+  }
+  &.aligncenter {
+    margin: 1em auto;
+    position: relative;
+    clear: none;
+  }
+  &.alignnone {
+    margin: 1em 0 1em 0;
+    clear: both;
+    float: none;
+    display: block;
+  }
+}
+
+/************* wp header *****************/
+#header {
+  height: auto;
+  margin: 0 0 30px;
+  overflow: auto;
+  width: 100%;
+  
+  a{
+    &:hover {
+      text-decoration: none;
+      color: #888;
+    }
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    line-height: 0.8em;
+    padding: 5px 0 0;
+    
+    a {
+      font-weight: 100;/*letter-spacing:-0.05em*/;
+      position: relative;
+    }
+  }
+  #blog-description {
+    color: #fff;
+    font-weight: normal;
+  }
+}  
+/************************** WP Access ********************/
+.access {
+  display: table;
+  height: auto;
+  float: right;
+  overflow: auto;
+}
+.access #menu {
+  display: table-cell;
+  font-size: 0.8em;
+}
+.access #menu ul {
+  display: block;
+  margin-right: 10px;
+}
+.access #menu ul li ul {
+  margin-left: 10px;
+}
+.access #menu a {
+  font-weight: normal;
+}
+
+.access #menu .page_item {
+  display: block;
+  float: left;
+  margin: 10px 6px;
+}
+
+.access #menu ul .page_item .children li {
+  display: block;
+  float: none;
+  margin: 0;
+  width: 61px;
+}
+
+/********************************************************************/
+/**** Begin - WP Stoemper Global Header/ Navigation Stoemper - Domain wide *****/
+/********************************************************************/
+
+#navigation {
+    background: url("../img/stoemper-bground-sprite.png") no-repeat scroll center 0px transparent;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.navLeft {
+    float: left;
+    list-style: none outside none;
+    margin: 0 0 0 190px;
+}
+
+.navRight {
+  list-style: none;
+  float: right;
+  margin: 0px 182px 0px 0px;
+}
+
+.menu {
+  .current-menu-item {
+    > a {
+      color: #FF9900;
+    }
+  }
+  .menu-item {
+    display: block;
+    float: left;
+    height: 40px;
+    margin: 0 5px 0 0;
+    
+    > a {
+      font-family: Arial,Helvetica,sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 10px;
+      display: block;
+      letter-spacing: 1px;
+      line-height: 32px;
+      padding: 5px;
+      text-transform: capitalize;
+    }
+    .sub-menu {
+      .menu-item {
+        float: none;
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}
+
+
+
+#globalHeader {
+  width: 990px;
+  margin:0px auto;
+  height: 80px;
+  background: url("../img/stoemper-bground-sprite.png") no-repeat scroll center 0px #000000;
+  
+  .headerImgRh {
+    float: right;
+    width: 429px;
+    height: 80px;
+  }
+  .headerImgLh {
+    float: left;
+    width: 429px;
+    height: 80px;
+  }
+}
+
+.globalStoemperZilla {
+    height: 221px;
+    margin-left: 393px;
+    position: absolute;
+    top: 10px;
+    width: 207px;
+    z-index: 888;
+}
+
+#menu_wrapper {
+  margin: 0px auto;
+  width: 990px;
+  height: 122px;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 12px 0px rgba(50, 50, 50, 0.9);
+  -moz-box-shadow:    0px 5px 12px 0px rgba(50, 50, 50, 0.9);
+  box-shadow:         0px 5px 12px 0px rgba(50, 50, 50, 0.9);
+  > nav {
+    background: url("../img/stoemper-bground-sprite.png") no-repeat scroll center -86px #000000;
+    bottom: 0;
+    height: 41px;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+/**********************88 Breadcrumb *********************/
+.breadcrumb {
+  font-weight: bold;
+  margin: 3em 0 0;
+  text-transform: uppercase;
+  
+  > li {
+    display: inline-block;
+    font-size: 1.15em;
+  }
+  
+  > a {
+    font-size: 1.15em;
+  }
+  
+  .active {
+    font-style: italic;
+  }
+}
+/********************** 404 page  ************************/
+
+@import "404-page.less";
+
+/********************** Comments ************************/
+
+@import "comments.less";
+
+/*************** EXIF Photo Data *****************/
+.exif-data {
+  margin: 2em 0;
+  h4 {
+    margin: 0 0 0.5em;
+  }
+  ul {
+    color: #444;
+    
+    .exif-title {
+      color: #888888;
+      font-weight: bold;
+      margin-right: 1em;
+    }
+  }
+  li {
+    color: #FFFFFF;
+    margin: 0 0 0.25em;
+  }
+}
+
+/********************** Tag Cloud Formatting *****************/
+
+.tagCloud {
+    background-color: #171717;
+    border-radius: 3px 3px 3px 3px;
+    margin: 10px auto;
+    padding: 10px 0px 10px 0;
+    text-align: center;
+    width: 100%;
+  
+  &.post-page {
+    background: none;
+  }
+  > h2 {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  > h5 {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  ul {
+    li {
+      a {
+        font-family: Arial,Helvetica,sans-serif;
+        font-weight: bold;
+        margin: 0 3px;
+      }
+    }
+  }
+  
+  li {
+    color: #FFFFFF;
+    line-height: 18px;
+  }
+}
+
+/******************** Nav Next and Nav Prev *****************************/
+
+.navigation {
+  background-color: #171717;
+  clear: both;
+  color: #888888;
+  overflow: auto;
+  padding: 0;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+
+.meta-nav {
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 8px;
+  vertical-align: top;
+  &:hover {
+    color: #FF9900;
+  }
+}
+.nav-next {
+  float: right;
+  text-align: right;
+  .prev-next-style;
+  
+  a {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 0;
+    &:hover {
+      color: #FF9900;
+      text-decoration: none;
+    }
+  }
+  .nav-excerpt {
+    padding: 0;
+  }
+}
+.nav-previous {
+  text-align: left;
+  float: left;
+  .prev-next-style;
+  a {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 0;
+    &:hover {
+      color: #FF9900;
+      text-decoration: none;
+    }
+  }
+}
+/******************** WP Single Post CSS *********************************/
+.single {
+  #container {
+    margin: 0px auto;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+  }
+}
+
+.single {
+  .post {
+    .post-attachment-style;
+    h2{
+      &.entry-title {
+        .entry-title-style;
+      }
+    }
+    .entry-content {
+      .entry-content-style;
+    }
+    .entry-meta {
+      .entry-meta-style;
+      .bigdate {
+        .big-date-style;
+      }
+    }
+    .full-photo {
+      margin: 0;
+      border-radius: @base-border-radius;
+      img {
+        border-radius: @base-border-radius;
+      }
+      &:hover {
+        .photo-credit {
+          .photo-credit-style();
+        }
+      }
+      .photo-credit {
+        .photo-watermark-style();
+      }
+    }
+  }
+}
+.single {
+  .attachment {
+    .post-attachment-style;
+    h2 {
+      &.entry-title {
+        .entry-title-style;
+      }
+    }
+    .entry-content {
+      .entry-content-style
+    }
+    .entry-meta {
+      .entry-meta-style;
+      .attachment-title {
+        clear: both;
+        display: block;
+        float: none;
+        font-size: 1.8em;
+        line-height: 1.2em;
+        margin-bottom: 1em;
+        width: 100%;
+      }
+      .bigdate {
+        .big-date-style;
+      }   
+    }
+    .full-photo {
+      margin: 0;
+      border-radius: @base-border-radius;
+      position: relative;
+      img {
+        border-radius: @base-border-radius;
+      }
+      &:hover {
+        .photo-credit {
+          .photo-credit-style();
+        }
+      }
+      .photo-credit {
+        .photo-watermark-style()
+      }
+    }
+  }
+}
+
+/********************* WP Single Post Entry Content ***************************/
+.single {
+  .post {
+    .entry-content {
+      h1 {
+        padding: 0.125em 0;
+      }
+      h2 {
+        padding: 0.125em 0;       
+      }
+      h3 {
+        padding: 0.25em 0;        
+      }
+      h4 {
+        padding: 0.25em 0;        
+      }
+      h5 {
+        padding: 0.5em 0;
+      }
+      h6 {
+        padding: 0.5em 0;        
+      }
+      img {
+        max-width: 585px;
+        height: inherit;
+      }
+    }
+  }
+}
+
+.single .post .entry-content blockquote {
+  padding: 1em 1em 0;
+  margin-bottom: 1em;
+  font-style: italic;
+  font-size: 1.2em
+}
+.single .post .entry-content ul {
+  margin-left: 1em;
+  list-style: circle;
+  padding-bottom: 1em
+}
+.single .post .entry-content ol {
+  margin-left: 1em;
+  list-style: upper-roman;
+  padding-bottom: 1em
+}
+.single .post .entry-content ul li ul {
+  margin-left: 2em;
+  list-style: disc;
+  padding: 0
+}
+.single .post .entry-content ol li ol {
+  margin-left: 2em;
+  list-style: upper-alpha;
+  padding: 0
+}
+.single .post .entry-content ul li, .single .post .entry-content ol li {
+  font-size: 1em;
+}
+.single .post .entry-content pre {
+  width: 585px;
+  overflow: auto;
+  padding: 1em 0;
+  color: #444;
+}
+.single .post .entry-content code {
+  padding: 1em 0;
+  display: block;
+  color: #444;
+}
+/***************** WP Page ***********************************/
+
+.page .page .entry-date {
+  width: 200px;
+  font-size: 3.6em;
+  float: left;
+  color: #888
+}
+.page .page .entry-content {
+  margin: 3em 0;
+  width: 100%;
+}
+
+.page .entry-content table {
+  margin: 0 auto;
+  font-family: 'DINBlackRegular', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+.page .entry-content table tbody tr td {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+    
+}
+
+.page .entry-content.bikes li {
+    margin-bottom: 0.25em;
+}
+.page .entry-content.bikes > ul {
+  color: #FFFFFF;
+  font-weight: bold;
+  list-style: disc inside none;
+  margin: 1em;
+}
+
+.page .page .entry-meta {
+  padding: 5px 0 0;
+  width: 100%;
+}
+/***************** Footer Secondary Nav menu *****************/
+footer {
+  clear: both;
+  color: #888888;
+  font-size: 1em;
+  margin: 0 auto 20px;
+  text-align: center;
+  width: 100%;
+  nav {
+    -webkit-box-shadow: 0px 5px 12px 0px rgba(50, 50, 50, 0.9);
+    -moz-box-shadow:    0px 5px 12px 0px rgba(50, 50, 50, 0.9);
+    box-shadow:         0px 5px 12px 0px rgba(50, 50, 50, 0.9);
+  }
+  
+  > nav {
+    background-color: #333333;
+    margin: 0 auto;
+    padding: 1em 0;
+    width: 990px;
+  }
+  
+  .menu-footer {
+    margin-bottom: 0.5em;
+    text-align: center;
+    width: 100%;
+    .menu {
+      .menu-item {
+        display: inline-block;
+        float: none;
+        text-align: center;
+      }
+    }
+  }
+  
+  p {
+    font-family: arial;
+    font-size: 1.025em;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+  }
+  
+  #footer-credit {
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+/***************** Stoemper Distributors Table ******************/
+.stoemper_distr {
+  td {
+    padding: 0 1em 2em;
+  }
+  .country_odd h2 {
+    margin-bottom: 1em;
+  }
+  .distributor {
+    p {
+      margin: 0;
+    }
+  }
+  .country_even {
+    td {
+      padding: 4em 1em 2em;
+    }
+  }
+}
+
+/****************** Contact Us Form *********************************/
+#gcf {
+    overflow: auto;
+    width: 50%;
+}
+
+
+#gcf .gcf_title {
+    overflow: auto;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+#gcf .gcftextbox {
+    height: 20px;
+    width: 200px;
+}
+
+#gcf .gcftextarea {
+    height: 130px;
+    width: 450px;
+}
+
