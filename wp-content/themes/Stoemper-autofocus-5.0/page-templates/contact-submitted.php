@@ -36,7 +36,7 @@
 					<div class="col-sm-12 col-md-12">
 <?php 
 $errors = "";
-$myemail = "quote@stoemper.com";//<-----Put Your email address here.
+$myemail = "information@stoemper.com";//<-----Put Your email address here.
 if(empty($_POST['firstName'])  || 
    empty($_POST['email_address']) || 
    empty($_POST['lastName']))
@@ -104,6 +104,8 @@ $color2				= $_POST['color2'];
 $color3 			= $_POST['color3'];
 $color4 			= $_POST['color4'];
 $paintNotes			= $_POST['paintNotes'];
+
+$compComments		= $_POST['compComments'];
 
 
 
