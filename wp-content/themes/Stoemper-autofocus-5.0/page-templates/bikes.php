@@ -83,7 +83,7 @@
 								    <a class="pull-left" href="/index.php/the-bikes/angus/"><img class="img-responsive" alt="Angus" src="<?php bloginfo('template_url'); ?>/img/angus/Angus_IMG_2471_200.jpg"/></a>
 								    <div class="media-body">
 								      <a href="/index.php/the-bikes/angus/" target="_self">Angus</a>
-										<p>A hand-made steel track race bike. Race proven performance and sexy looks.</p>
+										<p>A hand-made aluminium track race bike. Race proven performance and sexy looks.</p>
 								    </div>
 							  	</li>
 							</ul>
