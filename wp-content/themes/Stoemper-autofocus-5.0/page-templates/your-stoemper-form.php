@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Quote - 2 Column Layout xx
+ * Template Name: Page - Your Stoemper Form 
  * The template used for displaying page content in page.php
  *
  * @author Matt Peternell| http://stoemper.com
@@ -13,7 +13,7 @@
 <script>
 $( document ).ready(function() {
 
-	var list = new Array("0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00");
+	var list = new Array("0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00" , "0.00");
 	
 	var flag = null;
 	$('#frameModel').change(function () {
@@ -62,8 +62,8 @@ $( document ).ready(function() {
 		$('#estimate').val("$" + sum);
         return false;
 	});
-	
-	$('#headsetBrand').change(function () {
+
+	$('#handleBarBrand').change(function () {
 		var id = $(this).find(':selected').attr('data-price') 
        	var output = list[3] = id
         console.log(list);
@@ -74,7 +74,7 @@ $( document ).ready(function() {
         return false;
 	});
 	
-	$('#bbBrand').change(function () {
+	$('#headsetBrand').change(function () {
 		var id = $(this).find(':selected').attr('data-price') 
        	var output = list[4] = id
         console.log(list);
@@ -85,7 +85,7 @@ $( document ).ready(function() {
         return false;
 	});
 	
-	$('#seatPostBrand').change(function () {
+	$('#bbBrand').change(function () {
 		var id = $(this).find(':selected').attr('data-price') 
        	var output = list[5] = id
         console.log(list);
@@ -96,9 +96,41 @@ $( document ).ready(function() {
         return false;
 	});
 
-	$('#stemBrand').change(function () {
+	$('#wheelSetBrand').change(function () {
 		var id = $(this).find(':selected').attr('data-price') 
        	var output = list[6] = id
+        console.log(list);
+
+		var sum = $.sum(list);
+		console.log(sum);
+		$('#estimate').val("$" + sum);
+        return false;
+	});
+	
+	$('#seatPostBrand').change(function () {
+		var id = $(this).find(':selected').attr('data-price') 
+       	var output = list[7] = id
+        console.log(list);
+
+		var sum = $.sum(list);
+		console.log(sum);
+		$('#estimate').val("$" + sum);
+        return false;
+	});
+	$('#stemBrand').change(function () {
+		var id = $(this).find(':selected').attr('data-price') 
+       	var output = list[8] = id
+        console.log(list);
+
+		var sum = $.sum(list);
+		console.log(sum);
+		$('#estimate').val("$" + sum);
+        return false;
+	});
+
+	$('#pumpBrand').change(function () {
+		var id = $(this).find(':selected').attr('data-price') 
+       	var output = list[9] = id
         console.log(list);
 
 		var sum = $.sum(list);
@@ -133,55 +165,55 @@ $( document ).ready(function() {
 							
 					</div>
 				<div class="col-sm-12 col-md-12">
-<form class="form-horizontal stoemper_form" role="form" action="http://www.stoemper.com/your-bike-info-submitted" method="POST" >
+<form class="form-horizontal stoemper_form" role="form" action="http://www.stoemper.com/your-stoemper-form-submitted" method="POST" >
 						<h3>Contact Info:</h3>
 						<div class="form-group">
 							<label for="firstName" class="col-sm-1 control-label">First Name</label>
 							<div class="col-sm-3">
-								<input type="text" class="form-control" id="firstName" name="firstName" value="<?=$firstName ?>" >
+								<input type="text" class="form-control input-sm" id="firstName" name="firstName" value="<?=$firstName ?>" >
 							</div>
 							<label for="lastName" class="col-sm-1 control-label">Last Name</label>
 							<div class="col-sm-3">
-								<input type="text" class="form-control" id="lastName" name="lastName" value="<?=$lastName ?>" >
+								<input type="text" class="form-control input-sm" id="lastName" name="lastName" value="<?=$lastName ?>" >
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="address1" class="col-sm-1 control-label">Address</label>
 							<div class="col-sm-3">
-								<input type="text" class="form-control" id="address1" name="address1" value="<?=$address1 ?>">
+								<input type="text" class="form-control input-sm" id="address1" name="address1" value="<?=$address1 ?>">
 							</div>
 							<label for="address1" class="col-sm-1 control-label">Address</label>
 							<div class="col-sm-3">
-								<input type="text" class="form-control" id="address2" name="address2" value="<?=$address2 ?>" >
+								<input type="text" class="form-control input-sm" id="address2" name="address2" value="<?=$address2 ?>" >
 							</div>
 							<label for="city" class="col-sm-1 control-label">City</label>
 							<div class="col-sm-3">
-								<input type="text" class="form-control" id="city" name="city" value="<?=$city ?>">
+								<input type="text" class="form-control input-sm" id="city" name="city" value="<?=$city ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							
 							<label for="State" class="col-sm-1 control-label">State</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="state" name="state" value="<?=$state ?>">
+								<input type="text" class="form-control input-sm" id="state" name="state" value="<?=$state ?>">
 							</div>
 							<label for="country" class="col-sm-1 control-label">Country</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="country"  name="country" value="<?=$country ?>">
+								<input type="text" class="form-control input-sm" id="country"  name="country" value="<?=$country ?>">
 							</div>
 							<label for="postalCode" class="col-sm-1 control-label">Postal Code</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="postalCode"  name="postalCode" value="<?=$postalCode ?>">
+								<input type="text" class="form-control input-sm" id="postalCode"  name="postalCode" value="<?=$postalCode ?>">
 							</div>
 						</div>
 						<div class="form-group">		
 							<label for="telephone" class="col-sm-1 control-label">Telephone</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="telephone" name="telephone" value="<?=$telephone ?>">
+								<input type="text" class="form-control input-sm" id="telephone" name="telephone" value="<?=$telephone ?>">
 							</div>
 							<label for="email" class="col-sm-1 control-label">Email</label>
 							<div class="col-sm-4">
-								<input type="text" class="form-control" id="email_address" name="email_address" value="<?=$email_address ?>">
+								<input type="text" class="form-control input-sm" id="email_address" name="email_address" value="<?=$email_address ?>">
 							</div>
 						</div>
 					
@@ -189,37 +221,37 @@ $( document ).ready(function() {
 						<div class="form-group">
 							<label for="height" class="col-sm-1 control-label">Height</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="height" name="height" value="<?=$height ?>">
+								<input type="text" class="form-control input-sm" id="height" name="height" value="<?=$height ?>">
 							</div>
 							<label for="inseam" class="col-sm-1 control-label">Inseam</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="inseam" name="inseam" value="<?=$inseam ?>">
+								<input type="text" class="form-control input-sm" id="inseam" name="inseam" value="<?=$inseam ?>">
 							</div>
 							<label for="shoeSize" class="col-sm-1 control-label">Shoe Size</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="shoe_size" name="shoe_size" value="<?=$shoe_size ?>">
+								<input type="text" class="form-control input-sm" id="shoe_size" name="shoe_size" value="<?=$shoe_size ?>">
 							</div>
 							<label for="weight" class="col-sm-1 control-label">Weight</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="weight" name="weight" value="<?=$weight ?>" placeholder="Kilogram or Pounds">
+								<input type="text" class="form-control input-sm" id="weight" name="weight" value="<?=$weight ?>" placeholder="Kilogram or Pounds">
 							</div>
 						</div>
 						<h3>Stoemper Bike Info:</h3>
 						<div class="form-group">
 							<label for="frameModel" class="col-sm-1 control-label">Frame Model</label>
 							<div class="col-sm-3">
-								<select class="form-control" id="frameModel" name="frameModel" value="<?=$frameModel ?>">
+								<select class="form-control input-sm" id="frameModel" name="frameModel" value="<?=$frameModel ?>">
 									<option>--Select Model--</option>
-								  	<option value="Darrell" data-price="2499.99">Darrell (alu road) - $2499</option>
-								  	<option value="Taylor" data-price="2099.99">Tayl&ouml;r (steel road) - $2099</option>
-								  	<option value="Ronny" data-price="2499.99">Ronny (alu cross) - $2499</option>
-								  	<option value="Eddy" data-price="2099.99">Eddy (steel cross) - $2099</option>
-								  	<option value="Angus" data-price="2499.99">Angus (alu track) - $2499</option> 	
+								  	<option value="Darrell - $2499.99" data-price="2499.99">Darrell (alu road) - $2499</option>
+								  	<option value="Taylor - $1999.99" data-price="1999.99">Tayl&ouml;r (steel road) - $1999</option>
+								  	<option value="Ronny - $2499.99" data-price="2499.99">Ronny (alu cross) - $2499</option>
+								  	<option value="Eddy - $1999.99" data-price="1999.99">Eddy (steel cross) - $1999</option>
+								  	<option value="Angus -$2499.99" data-price="2499.99">Angus (alu track) - $2499</option> 	
 								</select>
 							</div>
 							<label for="size" class="col-sm-1 control-label">Size</label>
 							<div class="col-sm-2">
-								<select class="form-control" id="frameSize" name="frameSize" value="<?=$frameSize ?>">
+								<select class="form-control input-sm" id="frameSize" name="frameSize" value="<?=$frameSize ?>">
 									<option>--Select Size--</option>
 								  	<option value="48">48</option>
 								  	<option value="50">50</option>
@@ -233,7 +265,7 @@ $( document ).ready(function() {
 							</div>
 							<label for="brakeType" class="col-sm-1 control-label">Brake type</label>
 							<div class="col-sm-3">
-								<select class="form-control" id="frameBrakeType" name="frameBrakeType" value="<?=$frameBrakeType ?>">
+								<select class="form-control input-sm" id="frameBrakeType" name="frameBrakeType" value="<?=$frameBrakeType ?>">
 									<option>--Select Type--</option>
 								  	<option value="Disc" >Disc</option>
 								  	<option value="Cantilever">Cantilever</option>
@@ -243,16 +275,16 @@ $( document ).ready(function() {
 						<div class="form-group">
 							<label for="frtDerType" class="col-sm-1 control-label">Ft.Derailleur Type</label>
 							<div class="col-sm-3">
-								<select class="form-control" id="frameFrtDerType" name="frameFrtDerType" value="<?=$frameFrtDerType ?>">
+								<select class="form-control input-sm" id="frameFrtDerType" name="frameFrtDerType" value="<?=$frameFrtDerType ?>">
 									<option>--Select Type--</option>
-								  	<option value ="Braze-on" data-price="0.00">Braze-on - $0.00</option>
-								  	<option value ="Clamp" data-price="0.00">Clamp - $0.00</option>
+								  	<option value ="Braze-on - $0.00" data-price="0.00">Braze-on - $0.00</option>
+								  	<option value ="Clamp - $0.00" data-price="0.00">Clamp - $0.00</option>
 								  	<option value="none" data-price="0.00">none</option>
 								</select>
 							</div>
 							<label for="frtDerCableStop" class="col-sm-1 control-label">Ft.Derailleur Cable stop?</label>
 							<div class="col-sm-3">
-								<select class="form-control" for="frameFrtDerCableStop" name="frameFrtDerCableStop" ">
+								<select class="form-control input-sm" for="frameFrtDerCableStop" name="frameFrtDerCableStop" ">
 									<option>--Select --</option>
 								  	<option value="Yes">Yes</option>
 								  	<option value="No">No</option>
@@ -263,20 +295,15 @@ $( document ).ready(function() {
 						<div class="form-group">
 							<label for="intendedGearingFrt" class="col-sm-1 control-label">Intended Gearing Front</label>
 							<div class="col-sm-2">
-								<select class="form-control" id="intendedGearingFrt" name="intendedGearingFrt" value="<?=$intendedGearingFrt ?>">
+								<select class="form-control input-sm" id="intendedGearingFrt" name="intendedGearingFrt" value="<?=$intendedGearingFrt ?>">
 									<option>-- Select --</option>
 								  	<option>Double</option>
 								  	<option>Single</option>
 								</select>
 							</div>
-							<label for="bigChainRingSize" class="col-sm-2 control-label">Big Chain Ring Size</label>
+							<label for="bigChainRingSize" class="col-sm-2 control-label">Chain Ring Size<br><small>(Big and Small 56t-32t)</small></label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="bigChainRingSize" name="bigChainRingSize" value="<?=$bigChainRingSize ?>" placeholder="62t" >
-							</div>
-						
-							<label for="smChainRingSize" class="col-sm-2 control-label">Small Chain Ring Size</label>
-							<div class="col-sm-2">
-								<input type="text" class="form-control" id="smChainRingSize" name="smChainRingSize" value="<?=$smChainRingSize ?>" placeholder="38t">
+								<input type="text" class="form-control input-sm" id="ChainRingSize" name="ChainRingSize" value="<?=$chainRingSize ?>" placeholder="62t-36t" >
 							</div>
 							
 						</div>
@@ -284,36 +311,36 @@ $( document ).ready(function() {
 						<div class="form-group">
 							<label for="make" class="col-sm-1 control-label">Make</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="make" name="make" value="<?=$make ?>" placeholder="Make">
+								<input type="text" class="form-control input-sm" id="make" name="make" value="<?=$make ?>" placeholder="Make">
 							</div>
 							<label for="model" class="col-sm-1 control-label">Model</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="model" name="model" value="<?=$model ?>" placeholder="Model">
+								<input type="text" class="form-control input-sm" id="model" name="model" value="<?=$model ?>" placeholder="Model">
 							</div>
 						
 							<label for="size" class="col-sm-1 control-label">Size</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="size" name="size" value="<?=$size ?>" placeholder="CM or Inch">
+								<input type="text" class="form-control input-sm" id="size" name="size" value="<?=$size ?>" placeholder="CM or Inch">
 							</div>
 
 							<label for="modelYear" class="col-sm-1 control-label">Year</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="modelYear" name="modelYear" value="<?=$modelYear ?>" placeholder="Model Year">
+								<input type="text" class="form-control input-sm" id="modelYear" name="modelYear" value="<?=$modelYear ?>" placeholder="Model Year">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="stemLength" class="col-sm-1 control-label">Stem Length</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="stemLength" name="stemLength" value="<?=$stemLength ?>" placeholder="Stem Length">
+								<input type="text" class="form-control input-sm" id="stemLength" name="stemLength" value="<?=$stemLength ?>" placeholder="Stem Length">
 							</div>
 							<label for="stemSpacers" class="col-sm-1 control-label">Stem Spacers</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="stemSpacers" name="stemSpacers" value="<?=$stemSpacers ?>" placeholder="Stem Spacers">
+								<input type="text" class="form-control input-sm" id="stemSpacers" name="stemSpacers" value="<?=$stemSpacers ?>" placeholder="Stem Spacers">
 							</div>
 						
 							<label for="seatPostStyle" class="col-sm-1 control-label">Seat Post Style</label>
 							<div class="col-sm-2">
-								<select class="form-control"  id="seatPostStyle" name="seatPostStyle" value="<?=$seatPostStyle ?>">
+								<select class="form-control input-sm"  id="seatPostStyle" name="seatPostStyle" value="<?=$seatPostStyle ?>">
 									<option>- Select Style -</option>
 								  	<option>Lay back</option>
 								  	<option>Straight</option>
@@ -323,17 +350,17 @@ $( document ).ready(function() {
 						<div class="form-group">
 							<label for="crankLength" class="col-sm-1 control-label">Crank Length</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="crankLength" name="crankLength" value="<?=$crankLength ?>" placeholder="Crank Length">
+								<input type="text" class="form-control input-sm" id="crankLength" name="crankLength" value="<?=$crankLength ?>" placeholder="Crank Length">
 							</div>
 							<label for="bbToSaddle" class="col-sm-1 control-label">Center of BB to Saddle Top</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="bbToSaddle" name="bbToSaddle" value="<?=$bbToSaddle ?>" placeholder="Inches or CM">
+								<input type="text" class="form-control input-sm" id="bbToSaddle" name="bbToSaddle" value="<?=$bbToSaddle ?>" placeholder="Inches or CM">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="customFit" class="col-sm-1 control-label">Have you had a custom fit?</label>
 							<div class="col-sm-6">
-								<textarea class="form-control" id="customFit" name="customFit" value="<?=$customFit ?>" rows="2"></textarea>
+								<textarea class="form-control input-sm" id="customFit" name="customFit" value="<?=$customFit ?>" rows="2"></textarea>
 							</div>
 						</div>
 						
@@ -342,7 +369,7 @@ $( document ).ready(function() {
 						<div class="form-group">
 							<label for="internalGearCbl" class="col-sm-1 control-label">Internal Gear Cables</label>
 							<div class="col-sm-2">
-								<select class="form-control" id="internalGearCbl" name="internalGearCbl" value="<?=$internalGearCbl ?>">
+								<select class="form-control input-sm" id="internalGearCbl" name="internalGearCbl" value="<?=$internalGearCbl ?>">
 									<option>-- Select --</option>
 								  	<option value="Yes" data-price="100.00">Yes - $100.00</option>
 								  	<option value="No" data-price="100.00">No - $0.00</option>
@@ -350,7 +377,7 @@ $( document ).ready(function() {
 							</div>
 							<label for="rrBrkCableRouting" class="col-sm-1 control-label">Rear Brake Cable Routing</label>
 							<div class="col-sm-2">
-								<select class="form-control" id="rrBrkCableRouting" name="rrBrkCableRouting" value="<?=$rrBrkCableRouting ?>">
+								<select class="form-control input-sm" id="rrBrkCableRouting" name="rrBrkCableRouting" value="<?=$rrBrkCableRouting ?>">
 									<option>-- Select --</option>
 								  	<option value="Internal">Internal</option>
 								  	<option value="External">External</option>
@@ -358,7 +385,7 @@ $( document ).ready(function() {
 							</div>
 							<label for="chainHanger" class="col-sm-1 control-label">Chain Hanger</label>
 							<div class="col-sm-2">
-								<select class="form-control" id="chainHanger" name="chainHanger" value="<?=$chainHanger ?>">
+								<select class="form-control input-sm" id="chainHanger" name="chainHanger" value="<?=$chainHanger ?>">
 									<option>-- Select --</option>
 								  	<option value="Yes">Yes</option>
 								  	<option value="No">No</option>
@@ -366,7 +393,7 @@ $( document ).ready(function() {
 							</div>
 							<label for="pumpPeg" class="col-sm-1 control-label">Pump Peg</label>
 							<div class="col-sm-2">
-								<select class="form-control" id="pumpPeg" name="pumpPeg" value="<?=$pumpPeg ?>">
+								<select class="form-control input-sm" id="pumpPeg" name="pumpPeg" value="<?=$pumpPeg ?>">
 									<option>-- Select --</option>
 								  	<option value="Yes">Yes</option>
 								  	<option value="No">No</option>
@@ -377,7 +404,7 @@ $( document ).ready(function() {
 						<div class="form-group">
 							<label for="bottomBracket" class="col-sm-1 control-label">Bottom Bracket</label>
 							<div class="col-sm-3">
-								<select class="form-control" id="bottomBracket" name="bottomBracket" value="<?=$bottomBracket ?>">
+								<select class="form-control input-sm" id="bottomBracket" name="bottomBracket" value="<?=$bottomBracket ?>">
 									<option>-- Select --</option>
 								  	<option id="pf30" value="PF30">PF30 (Standard)</option>
 								  	<option value="English">English Threaded</option>
@@ -385,15 +412,15 @@ $( document ).ready(function() {
 							</div>
 							<label for="headTube" class="col-sm-1 control-label">Head Tube</label>
 							<div class="col-sm-3">
-								<select class="form-control" id="headTube" name="headTube" value="<?=$headTube ?>">
+								<select class="form-control input-sm" id="headTube" name="headTube" value="<?=$headTube ?>">
 									<option>-- Select --</option>
-								  	<option value="Tappered (Standard)">Tapered (Standard)</option>
+								  	<option value="Tapered (Standard)">Tapered (Standard)</option>
 								  	<option value="Straight">Straight</option>
 								</select>
 							</div>
 							<label for="intergratedSeatPost" class="col-sm-1 control-label">Intergrated Seat Post</label>
 							<div class="col-sm-2">
-								<select class="form-control" id="intergratedSeatPost" name="intergratedSeatPost" value="<?=$intergratedSeatPost ?>">
+								<select class="form-control input-sm" id="intergratedSeatPost" name="intergratedSeatPost" value="<?=$intergratedSeatPost ?>">
 									<option>-- Select --</option>
 								  	<option value="Yes - $150.00" data-price="150.00">Yes - $150.00</option>
 								  	<option value="No - $0.00" data-price="0.00">No - $0.00</option>
@@ -404,7 +431,7 @@ $( document ).ready(function() {
 						<div class="form-group">
 							<label for="gearingOption" class="col-sm-1 control-label">Gearing Option</label>
 							<div class="col-sm-2">
-								<select class="form-control" id="gearingOption" name="gearingOption" value="<?=$gearingOption ?>">
+								<select class="form-control input-sm" id="gearingOption" name="gearingOption" value="<?=$gearingOption ?>">
 									<option>-- Select --</option>
 								  	<option value="Single Speed">Single Speed</option>
 								  	<option value="Geared">Geared</option>
@@ -412,100 +439,121 @@ $( document ).ready(function() {
 							</div>
 							<label for="h20BottleMounts" class="col-sm-1 control-label">H20 Bottle Mounts</label>
 							<div class="col-sm-2">
-								<select class="form-control" id="h20BottleMounts" name="h20BottleMounts" value="<?=$h20BottleMounts ?>">
+								<select class="form-control input-sm" id="h20BottleMounts" name="h20BottleMounts" value="<?=$h20BottleMounts ?>">
 									<option>-- Select --</option>
 								  	<option value="0">0</option>
 								  	<option value="1">1</option>
 								  	<option value="2">2</option>
 								</select>
 							</div>
-						</div>
-						<div class="form-group">
-							<label for="headsetBrand" class="col-sm-1 control-label">Headset Brand</label>
-							<div class="col-sm-3">
-								<select class="form-control" id="headsetBrand" name="headsetBrand" value="<?=$headsetBrand ?>">
+							<label for="handleBarBrand" class="col-sm-1 control-label">Handle Bar</label>
+							<div class="col-sm-2">
+								<select class="form-control input-sm" id="handleBarBrand" name="handleBarBrand" value="<?=$handleBarBrand ?>">
 									<option>-- Select --</option>
-								  	<option value="Chris King - $159.00" data-price="159.00">Chris King - $159.00</option>
-								  	<option value="Cane Creek 110 - $149.00" data-price="149.00">Cane Creek 110 - $149.00</option>
-								  	<option value="Cane Creek 40 - $40.00" data-price="40.00">Cane Creek 40 - $40.00</option>
+								  	<option value="FSA Energy – $109" data-price="109.00">FSA Energy – $109</option>
+								  	<option value="FSA SL-K – $309" data-price="309.00">FSA SL-K – $309</option>
 								</select>
 							</div>
-							<label for="bbBrand" class="col-sm-1 control-label">BB Brand</label>
+						</div>
+						<div class="form-group">
+							<label for="headsetBrand" class="col-sm-1 control-label">Headset</label>
 							<div class="col-sm-3">
-								<select class="form-control" id="bbBrand" name="bbBrand" value="<?=$bbBrand ?>">
+								<select class="form-control input-sm" id="headsetBrand" name="headsetBrand" value="<?=$headsetBrand ?>">
 									<option>-- Select --</option>
-								  	<option value="Chris King - $159.00 PF30" data-price="159.00">Chris King - $159.00 PF30</option>
-								  	<option value="Cane Creek 110 - $149.00 PF30" data-price="149.00">Cane Creek 110 - $149.00 PF30</option>
-								  	<option value="Cane Creek 40 - $40.00 PF30" data-price="40.00">Cane Creek 40 - $40.00 PF30</option>
-								  	<option value="Chris King - $159.00 English" data-price="159.00">Chris King - $159.00 English</option>
+								  	<option value="FSA Orbit MX – $69.00" data-price="69.00">FSA Orbit MX – $69.00</option>
+								  	<option value="FSA Orbit ITA – $109.00" data-price="109.00">FSA Orbit ITA – $109.00</option>
+								</select>
+							</div>
+							<label for="bbBrand" class="col-sm-1 control-label">Bottom Bracket</label>
+							<div class="col-sm-3">
+								<select class="form-control input-sm" id="bbBrand" name="bbBrand" value="<?=$bbBrand ?>">
+									<option>-- Select --</option>
+								  	<option value="FSA PF30 ceramic -$199" data-price="199.99">FSA PF30 ceramic -$199</option>
+								  	<option value="FSA PF30 steel – $49" data-price="49.00">FSA PF30 steel – $49</option>
+								</select>
+							</div>
+							<label for="wheelSetBrand" class="col-sm-1 control-label">Wheelset</label>
+							<div class="col-sm-3">
+								<select class="form-control input-sm" id="wheelSetBrand" name="wheelSetBrand" value="<?=$wheelSetBrand?>">
+									<option value="No" data-price="0.00">-- Select --</option>
+								  	<option value="Vision Metron - $2499" data-price="2499">Vision Metron - $2499</option>
+<!-- 								<option value="FSA PF30 steel – $49" data-price="49.00">FSA PF30 steel – $49</option> -->
 								</select>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="seatPostBrand" class="col-sm-1 control-label">Seat Post</label>
 							<div class="col-sm-3">
-								<select class="form-control" id="seatPostBrand" " name="seatPostBrand" value="<?=$seatPostBrand ?>">
+								<select class="form-control input-sm" id="seatPostBrand" " name="seatPostBrand" value="<?=$seatPostBrand ?>">
 									<option>-- Select --</option>
-								  	<option value="Enve - $250.00" data-price="250.00">Enve - $250.00</option>
-								  	<option value="Enve Painted - $350.00" data-price="350.00">Enve Painted - $350.00</option>
-								  	<option value="Ritchey - $65.00" data-price="65.00">Ritchey - $65.00</option>
-								  	<option value="Ritchey Painted - $165.00" data-price="165.00">Ritchey Painted - $165.00</option>
+								  	<option value="FSA SL-K – $119" data-price="119.00">FSA SL-K – $119</option>
+								  	<option value="FSA Energy - $54" data-price="54.00">FSA Energy - $54</option>
+								  	<option value="Painted FSA SL-K – $219" data-price="219.00">Painted FSA SL-K – $219</option>
+								  	<option value="Painted FSA Energy - $154" data-price="154.00">Painted FSA Energy - $154</option>
 								</select>
 							</div>
 							<label for="stemBrand" class="col-sm-1 control-label">Stem</label>
 							<div class="col-sm-3">
-								<select class="form-control" id="stemBrand" name="stemBrand" value="<?=$stemBrand ?>">
+								<select class="form-control input-sm" id="stemBrand" name="stemBrand" value="<?=$stemBrand ?>">
 									<option>-- Select --</option>
-								  	<option value="Enve - $250.00" data-price="250.00">Enve - $250.00</option>
-								  	<option value="Enve Painted - $350.00" data-price="350.00">Enve Painted - $350.00</option>
-								  	<option value="Ritchey - $65.00" data-price="65.00">Ritchey - $65.00</option>
-								  	<option value="Ritchey Painted - $165.00" data-price="165.00">Ritchey Painted - $165.00</option>
+								  	<option value="FSA SL-K – $109" data-price="109.00">FSA SL-K – $109</option>
+								  	<option value="FSA Energy – $99" data-price="99.00">FSA Energy – $99.00</option>
+								  	<option value="Painted FSA SL-K – $209" data-price="209.00">Painted FSA SL-K – $209</option>
+								  	<option value="Painted FSA Energy – $199" data-price="199.00">Painted FSA Energy – $199</option>
 								</select>
 							</div>
 							<label for="stemSize" class="col-sm-1 control-label">Stem Size</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="stemSize" name="stemSize" value="<?=$stemSize ?>">
+								<input type="text" class="form-control input-sm" id="stemSize" name="stemSize" value="<?=$stemSize ?>">
 							</div>
 						</div>
 						
 						<div class="form-group">
+							<label for="pumpBrand" class="col-sm-1 control-label">Frame Pump <br><small>Painted to match</small></label>
+							<div class="col-sm-3">
+								<select class="form-control input-sm" id="pumpBrand" name="pumpBrand" value="<?=$pumpBrand ?>">
+									<option value="No pump" data-price="0.00">-- Select --</option>
+									<option value="No pump" data-price="0.00">No Pump</option>
+								  	<option value="Silca frame pump - $240" data-price="240.00">Silca frame pump - $240</option>
+								</select>
+							</div>
 							<label for="anythingElse" class="col-sm-1 control-label">Anything Else?</label>
 							<div class="col-sm-6">
-								<textarea class="form-control" rows="2" id="anythingElse" name="anythingElse" value="<?=$anythingElse ?>"></textarea>
+								<textarea class="form-control input-sm" rows="2" id="anythingElse" name="anythingElse" value="<?=$anythingElse ?>"></textarea>
 							</div>
 						</div>
 						<h3>Cost Estimate</h3>
 						<div class="form-group">
 							<label for="estimate" class="col-sm-1 control-label">Estimate</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="estimate" name="estimate" value="<?=$estimate ?>">
+								<input type="text" class="form-control input-sm" id="estimate" name="estimate" value="<?=$estimate ?>">
 							</div>
 						</div>
 						<h3>Color Choices</h3>
 						<div class="form-group">
 							<label for="color1" class="col-sm-1 control-label">Color 1</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="color1" name="color1" value="<?=$color1 ?>">
+								<input type="text" class="form-control input-sm" id="color1" name="color1" value="<?=$color1 ?>">
 							</div>
 						
 							<label for="color2" class="col-sm-1 control-label">Color 2</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="color2" name="color2" value="<?=$color2 ?>">
+								<input type="text" class="form-control input-sm" id="color2" name="color2" value="<?=$color2 ?>">
 							</div>	
 							<label for="color3" class="col-sm-1 control-label">Color 3</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="color3" name="color3" value="<?=$color3 ?>">
+								<input type="text" class="form-control input-sm" id="color3" name="color3" value="<?=$color3 ?>">
 							</div>
 						
 							<label for="color4" class="col-sm-1 control-label">Color 4</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" id="color4" name="color4" value="<?=$color4 ?>">
+								<input type="text" class="form-control input-sm" id="color4" name="color4" value="<?=$color4 ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="paintNotes" class="col-sm-1 control-label">Paint Notes</label>
 							<div class="col-sm-6">
-								<textarea class="form-control" rows="2" id="paintNotes" name="paintNotes" value="<?=$paintNotes ?>"></textarea>
+								<textarea class="form-control input-sm" rows="2" id="paintNotes" name="paintNotes" value="<?=$paintNotes ?>"></textarea>
 							</div>
 						</div>
 						<h3>Components</h3>
@@ -513,7 +561,7 @@ $( document ).ready(function() {
 						<div class="form-group">
 							<label for="compComments" class="col-sm-1 control-label">Comments</label>
 							<div class="col-sm-6">
-								<textarea class="form-control" rows="2" name="compComments" id="compComments" value="<?=$compComments ?>"></textarea>
+								<textarea class="form-control input-sm" rows="2" name="compComments" id="compComments" value="<?=$compComments ?>"></textarea>
 							</div>
 						</div>
 						
@@ -537,7 +585,7 @@ $( document ).ready(function() {
 				<?php //if ( dynamic_sidebar('sidebar-3') ) : else : endif; ?>
 			</div>
 		<!-- .post -->
-			<?php if ( get_post_custom_values('comments') ) comments_template() // Add a key+value of "comments" to enable comments on this page ?>
+			<?php //if ( get_post_custom_values('comments') ) comments_template() // Add a key+value of "comments" to enable comments on this page ?>
 		</div>
 	<!-- #content -->
 </div>

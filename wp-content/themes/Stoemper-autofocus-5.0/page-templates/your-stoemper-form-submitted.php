@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page - Contact Submitted - Your Stoemper
+ * Template Name: Page - Your Stoemper Form - Submitted
  * The template used for displaying page content in page.php
  *
  * @author Matt Peternell| http://stoemper.com
@@ -36,7 +36,7 @@
 					<div class="col-sm-12 col-md-12">
 <?php 
 $errors = "";
-$myemail = "information@stoemper.com";//<-----Put Your email address here.
+$myemail = "quote@stoemper.com";//<-----Put Your email address here  , information@stoemper.com.
 
 if(empty($_POST['firstName'])  || 
    empty($_POST['email_address']) || 
@@ -67,8 +67,7 @@ $frameBrakeType 		= $_POST['frameBrakeType'];
 $frameFrtDerType 		= $_POST['frameFrtDerType'];
 $frameFrtDerCableStop	= $_POST['frameFrtDerCableStop'];
 $intendedGearingFrt		= $_POST['intendedGearingFrt'];
-$bigChainRingSize		= $_POST['bigChainRingSize'];
-$smChainRingSize		= $_POST['smChainRingSize'];
+$chainRingSize			= $_POST['chainRingSize'];
 
 $make 					= $_POST['make'];
 $model 					= $_POST['model'];
@@ -91,10 +90,13 @@ $headTube 				= $_POST['headTube'];
 $intergratedSeatPost 	= $_POST['intergratedSeatPost'];
 $gearingOption 			= $_POST['gearingOption'];
 $h20BottleMounts 		= $_POST['h20BottleMounts'];
+$handleBarBrand		 	= $_POST['handleBarBrand'];
 $headsetBrand 			= $_POST['headsetBrand'];
 $bbBrand 				= $_POST['bbBrand'];
+$wheelSetBrand			= $_POST['wheelSetBrand'];
 $seatPostBrand 			= $_POST['seatPostBrand'];
 $stemBrand 				= $_POST['stemBrand'];
+$pumpBrand 				= $_POST['pumpBrand'];
 $stemSize 				= $_POST['stemSize'];
 $anythingElse 			= $_POST['anythingElse'];
 
@@ -131,7 +133,7 @@ if( empty($errors))
 	$headers .= "Cc: $email_address\n";
 	$headers .= "Reply-To: $email_address";
 	
-	$email_subject = "Stoemper.com - Your Stoemper! - Form Submission test";
+	$email_subject = "Stoemper.com - Your Stoemper! - Form Submission";
 	$email_body="$firstName $lastName has submitted the Send us your info! - Form. Here are the form details.\n\n";
 	$email_body.="Contact Info:\n\n";
 	$email_body.="$firstName $lastName\n";
@@ -144,13 +146,12 @@ if( empty($errors))
 	
 	$email_body.="Stoemper Bike Info:\n\n";
 	$email_body.="Frame Model: $frameModel\n";
-	$email_body.="Frame Size: $frameSize\n";
+	$email_body.="Frame Size: $frameSize cm\n";
 	$email_body.="Brake Type: $frameBrakeType\n";
 	$email_body.="Frame Front Der. Type: $frameFrtDerType\n";
 	$email_body.="Frame Front Der. Cable Stop: $frameFrtDerCableStop\n";
 	$email_body.="Intended Gearing Front: $intendedGearingFrt\n";
-	$email_body.="Big Chainring Size: $bigChainRingSize\n";
-	$email_body.="Small Chainring Size: $smChainRingSize\n\n";
+	$email_body.="Chainring Sizes (Big and Small): $chainRingSize\n\n";
 	
 	$email_body.="Current or Previous Bike Info:\n\n";
 	$email_body.="Make: $make\n";
@@ -161,7 +162,6 @@ if( empty($errors))
 	$email_body.="Stem Spacers: $stemSpacers\n";
 	$email_body.="Seat Post Style: $seatPostStyle\n";
 	$email_body.="Crank Length: $crankLength\n";
-	$email_body.="BB To Rail: $bbToRail\n";
 	$email_body.="BB To Saddle: $bbToSaddle\n";
 	$email_body.="Custom Fit: $customFit\n\n";
 	
@@ -175,11 +175,14 @@ if( empty($errors))
 	$email_body.="intergratedSeatPost: $intergratedSeatPost\n";
 	$email_body.="Gearing Option: $gearingOption\n";
 	$email_body.="H20 Bottle Mounts : $h20BottleMounts\n";
+	$email_body.="Handle Bar Brand: $handleBarBrand\n";
 	$email_body.="Headset Brand: $headsetBrand\n";
 	$email_body.="Bottom Bracket Brand: $bbBrand\n";
+	$email_body.="Wheelset Brand: $wheelSetBrand\n";
 	$email_body.="Seat Post Brand: $seatPostBrand\n";
 	$email_body.="Stem Brand: $stemBrand\n";
-	$email_body.="Stem Size: $stemSize\n\n";
+	$email_body.="Stem Size: $stemSize \n";
+	$email_body.="Pump Brand: $pumpBrand \n\n";
 	
 	$email_body.="Cost Estimate: $estimate\n\n";
 	
@@ -208,7 +211,7 @@ echo nl2br($errors);
 				<?php //get_sidebar(); ?>
 				<?php //if ( dynamic_sidebar('sidebar-3') ) : else : endif; ?>
 			</div><!-- .post -->
-			<?php if ( get_post_custom_values('comments') ) comments_template() // Add a key+value of "comments" to enable comments on this page ?>
+			<?php //if ( get_post_custom_values('comments') ) comments_template() // Add a key+value of "comments" to enable comments on this page ?>
 		</div><!-- #content -->
 	</div><!-- #container -->
 <?php get_footer() ?>
