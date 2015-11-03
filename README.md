@@ -1,1 +1,0 @@
-# stoemper-wp readme
