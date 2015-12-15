@@ -10,6 +10,8 @@
 .cvs
 *.bak
 *.swp
+node_modules
+node_modules/*
 sitemap.xml
 sitemap.xml.gz
 Thumbs.db
@@ -29,6 +31,7 @@ wp-content/gallery
 wp-content/gallery/ben-berden
 wp-content/gallery/colors
 wp-content/gallery/the-works
+wp-content/plugins/
 images/*
 images/
 images

@@ -1,0 +1,1 @@
+<a href="/" class="GodZillaPulse" title="Return Stoemper Home"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/StoemperGodzila-logo.png" class="globalStoemperZilla" alt="Stoemper Logo" /></a>

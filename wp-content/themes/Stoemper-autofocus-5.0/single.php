@@ -58,19 +58,7 @@
 										comments_rss() ) ?>
 										 
 				
-									<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) : // Comments and trackbacks open ?>
-									<?php printf(__('<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'sandbox'), get_trackback_url()) ?>
 									
-									<?php elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) : // Only trackbacks open ?>
-									<?php printf(__('Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'sandbox'), get_trackback_url()) ?>
-									
-									<?php elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) : // Only comments open ?>
-									<?php printf(__('Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'sandbox')) ?>
-									
-									<?php elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) : // Comments and trackbacks closed ?>
-									<?php _e('Both comments and trackbacks are currently closed.') ?>
-									
-									<?php endif; ?>
 									
 									<span class="attachment-link"><?php link_to_attachment(); ?></span>
 									
@@ -94,6 +82,6 @@
 		
 	</div>
 	<div class="container comment-bground">
-		<?php comments_template('', true); ?>
+		<?php //comments_template('', true); ?>
 	</div>
 <?php get_footer() ?>

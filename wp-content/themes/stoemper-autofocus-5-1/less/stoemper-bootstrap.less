@@ -1,0 +1,712 @@
+/**
+ * LESS-CSS Overrides for Wordpresss to improve integration
+ * 
+ * @author mpeternell | http://mattpeternell.com
+ * @package Stoemper-autofocus-5-1
+ * Compiled using: Grunt
+ */
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import url("../bootstrap/less/variables.less");
+@import url("mixins.less");
+
+@base-link-color: #ffffff;
+@base-link-hover-color: #FF9900;
+@base-drop-shadow-color: #000000;
+@base-border-radius: 3px;
+@post-background-color: #333333;
+@panel-border-color: #ffffff;
+@panel-border-thickness: 5px solid;
+@global-letter-spacing: 0.10em;
+@global-section-padding: 10rem;
+
+/************ Embedded Fonts ***********************/
+@font-face {
+  font-family: 'DINBlackRegular';
+  src: url('../fonts/din_black.eot');
+  src: url('../fonts/din_black.eot?#iefix') format('embedded-opentype'),  url('../fonts/din_black.woff') format('woff'),  url('../fonts/din_black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/************** Site Structure *********************/
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+time {
+  font-family: @font-family-base;
+  font-size: 1em;
+}
+
+abbr, acronym, abbr[title], acronym[title], dfn[title] {
+  text-transform: none;
+  border: none;
+  letter-spacing: inherit;
+  cursor: default;
+}
+p:last-child {
+	margin-bottom: 0;
+}
+
+.bikes-bground {
+    background-color: #000000;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+.home {
+ 	.bikes-bground {
+ 		padding: 0;
+ 	}
+ 	.stoemp-pg-temp {
+	    max-width: 500px;
+	}
+	h1, .h1, h2, .h2, h3, .h3 {
+		text-shadow: 4px 4px 2px rgba(45, 45, 45, 0.8);
+	}
+	h3 {
+	    font-style: italic;
+	    font-weight: 400;
+	    line-height: 36px;
+	}
+}
+.index-bground {
+    background: rgb(0, 0, 0) url("../img/ben-berden-DSC07780-1170x1170.jpg") no-repeat scroll center center / cover ;
+    min-height: 750px;
+    margin: 0 auto;
+    padding: 9em 5.357em;
+}
+.inner-container {
+	padding-left: 30px;
+    padding-right: 30px;
+}
+
+/******************** WP Blog setup ******************
+ *********************************************************/
+
+.blog {
+	// figure {
+	    // position: relative;
+	// }
+	// figurcaption {
+	    // position: absolute;
+	// }
+}
+
+.blog {
+	.row.row-blog-gutter {
+	    margin: 0;
+	}
+	.row-blog-gutter .figure-block {
+	    padding: 2px;
+	}
+	img {
+		//opacity: 0.90;
+		-webkit-transition: opacity 0.2s ease-out;
+		-moz-transition: opacity 0.2s ease-out;
+		-o-transition: opacity 0.2s ease-out;
+		transition: opacity 0.2s ease-out;
+	}
+	
+	figure {
+		background: #000;
+		position: relative;
+		
+	}
+	
+	figure:hover img {
+		opacity: 0.60;
+	}
+	
+	figcaption {
+		position: absolute;
+		bottom: 15px;
+		margin: 0 30px 0px 0;
+		padding: 10px 15px;
+		background-color: rgba(0, 0, 0,0.4);
+	}
+	
+	figcaption > a {
+		text-indent: 200%;
+		white-space: nowrap;
+		font-size: 0;
+		opacity: 0;
+	}
+	figcaption h2 {
+		font-size: 1em;
+		line-height: 20px;
+		margin: 0px;
+		letter-spacing: 0.3px;
+		text-transform: uppercase;
+		font-weight: 800;
+		color: #fff;
+		padding-bottom: 5px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+	}
+	
+	figcaption h2 a {
+		color: #fff;
+	}
+	figcaption .post-meta {
+	    padding-top: 7px;
+	}
+}
+
+
+/******************** WP Image Alignment ******************
+ *********************************************************/
+
+img {
+  &.alignleft {
+    margin: 1em 4em 1em 0;
+    clear: left;
+    float: left;
+  }
+  &.alignright {
+    margin: 1em 0 1em 4em;
+    clear: right;
+    float: right;
+  }
+  &.aligncenter {
+    margin: 1em auto;
+    position: relative;
+    clear: none;
+  }
+  &.alignnone {
+    margin: 1em 0 1em 0;
+    clear: both;
+    float: none;
+    display: block;
+  }
+}
+
+/***************** WP Img Caption ****************/
+.bike-images {
+	.imageStyle {
+		border: 1px solid #666666;
+		margin: 0 auto;
+	}
+	.top {
+		margin-bottom: 3.5em;
+	}
+}
+
+
+.wp-caption {
+  overflow:auto;
+  .wp-caption-text {
+    font-style: italic;
+    text-align: center;
+  }
+  &.alignleft {
+    margin: 1em 4em 1em 0;
+    clear: left;
+    float: left;
+  }
+  &.alignright {
+    margin: 1em 0 4em 1em;
+    clear: right;
+    float: right;
+  }
+  &.aligncenter {
+    margin: 1em auto;
+    position: relative;
+    clear: none;
+  }
+  &.alignnone {
+    margin: 1em 0 1em 0;
+    clear: both;
+    float: none;
+    display: block;
+  }
+}
+
+
+/********************************************************************/
+/**** Begin - WP Stoemper Global Header/ Navigation Stoemper - Domain wide *****/
+/********************************************************************/
+
+.navbar {
+  	&.bground-image {  
+		border-radius: 0;
+		margin-bottom: 0;
+		position: relative;
+		background: url("../img/stoemper-bground-sprite_02.jpg") no-repeat scroll center -1px transparent;
+	}
+  	.navLeft {
+    	float: left;
+    	margin: 5px 0 0 20%;
+  	}
+  
+  	.navRight {
+    	float: right;
+    	margin: 5px 20% 0 0;
+	}
+}
+
+.navbar-nav  {
+	> li {
+		> a {
+		    font-weight: 600;
+		    letter-spacing: 0.02em;
+		}
+	}
+}
+
+/********************** Button Styling Overrides *********/
+
+.btn {
+	letter-spacing: 0.1em;
+}
+
+/*************** EXIF Photo Data *****************/
+
+
+/********************** Tag Cloud Formatting *****************/
+
+.tagCloud {
+    text-align: center;
+  
+  &.post-page {
+    background: none;
+  }
+  > h5 {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  	a {
+        display: inline-block;
+    	font-weight: bold;
+    	margin: 1rem;
+	}
+
+  li {
+    color: #FFFFFF;
+    line-height: 18px;
+  }
+}
+
+/******************** Nav Next and Nav Prev *****************************/
+
+.blogNav {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	.fa {
+		font-weight: bold;
+	}
+}
+.nav-next {
+  float: right;
+  text-align: right;
+  
+  a {
+    display: block;
+    float: right;
+    font-weight: 600;
+    letter-spacing: @global-letter-spacing;
+  }
+  .nav-excerpt {
+    padding: 0;
+  }
+}
+.nav-previous {
+  float:left;
+  a {
+    display: block;
+    float:left;
+    font-weight: 600;
+    letter-spacing:  @global-letter-spacing;
+  }
+}
+/******************** WP Single Post CSS *********************************/
+.author {
+    font-size: 0.8em;
+}
+.post-header {
+	margin-bottom: 5rem;
+}
+.post-content .entry-meta {
+	background-color: #333333;
+	padding: 2em;
+}
+
+.single {
+  .attachment {
+    .post-attachment-style;
+    h2 {
+      &.entry-title {
+        .entry-title-style;
+      }
+    }
+    .entry-content {
+      .entry-content-style
+    }
+    .entry-meta {
+      .entry-meta-style;
+      .attachment-title {
+        clear: both;
+        display: block;
+        float: none;
+        font-size: 1.8em;
+        line-height: 1.2em;
+        margin-bottom: 1em;
+      }
+      .bigdate {
+        .big-date-style;
+      }   
+    }
+    .full-photo {
+      margin: 0;
+      border-radius: @base-border-radius;
+      position: relative;
+      img {
+        border-radius: @base-border-radius;
+      }
+      &:hover {
+        .photo-credit {
+          .photo-credit-style();
+        }
+      }
+      .photo-credit {
+        .photo-watermark-style()
+      }
+    }
+  }
+}
+
+/********************* WP Single Post Entry Content ***************************/
+
+
+.single .post .entry-content blockquote {
+  padding: 1em 1em 0;
+  margin-bottom: 1em;
+  font-style: italic;
+  font-size: 1.2em
+}
+.single .post .entry-content ul {
+  margin-left: 1em;
+  list-style: circle;
+  padding-bottom: 1em
+}
+.single .post .entry-content ol {
+  margin-left: 1em;
+  list-style: upper-roman;
+  padding-bottom: 1em
+}
+.single .post .entry-content ul li ul {
+  margin-left: 2em;
+  list-style: disc;
+  padding: 0
+}
+.single .post .entry-content ol li ol {
+  margin-left: 2em;
+  list-style: upper-alpha;
+  padding: 0
+}
+.single .post .entry-content ul li, .single .post .entry-content ol li {
+  font-size: 1em;
+}
+.single .post .entry-content pre {
+  width: 585px;
+  overflow: auto;
+  padding: 1em 0;
+  color: #444;
+}
+.single .post .entry-content code {
+  padding: 1em 0;
+  display: block;
+  color: #444;
+}
+/***************** WP Page ***********************************/
+
+.page .page .entry-date {
+  float: left;
+  color: #888
+}
+.row {
+	&.bikes {
+	    margin-bottom: @global-section-padding;
+	    &:last-child {
+		    margin-bottom: 0;
+		}
+	}
+	&.entry-content {
+	    margin-bottom: @global-section-padding;
+	}
+	&.bike-images {
+	    margin-bottom: @global-section-padding;
+	}
+	&.geo-section, &.features {
+	    margin-bottom: @global-section-padding;
+	}
+}
+
+.geo-section {
+	h3 {
+	    margin-bottom: 2em;
+	    margin-top: 0;
+	}
+}
+
+.img-col {
+	img {
+	    margin-bottom: 3em;
+	    &:last-child {
+	    	margin-bottom: 0;
+	    }
+	}
+}
+
+/***************** Footer Secondary Nav menu *****************/
+
+.page-footer {
+    background-color: #333333;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+	.menu-footer {
+		margin-bottom: 0.5em;
+	 	text-align: center;
+		width: 100%;
+		.menu-list {	
+			.menu-item {
+	        	display: inline-block;
+	        	padding: 0 2rem;
+	        	text-align: center;
+	      	}
+	    }
+	}
+  	p {
+    	margin: 0;
+    	text-align: center;
+  	}
+}
+
+.site-credits p {
+    font-size: 0.875em;
+    font-weight: 500;
+}
+
+/***************** Stoemper Distributors Table ******************/
+.stoemper_distr {
+  td {
+    padding: 0 1em 2em;
+    vertical-align: top;
+  }
+  .country_odd h2 {
+    margin-bottom: 1em;
+  }
+  .distributor {
+    p {
+      margin: 0;
+    }
+  }
+  .country_even {
+    td {
+      padding: 4em 1em 2em;
+    }
+  }
+  
+}
+
+/************** Bike Category Page *******************/
+.bikeCategory {
+	> header {
+	margin-bottom: 3em;
+	}
+	header .img-responsive {
+	    max-width: 540px;
+	    width: 100%;
+	}
+	.rollOver {
+		margin-top: 4em;
+		margin-bottom: 4em;
+	}
+	a {
+	    display: block;
+	    font-size: @font-size-h3;
+	    font-weight: @headings-font-weight;
+	    margin-bottom: 1rem;
+	}
+	img {
+		border: 1px solid #333333;
+	}
+}
+
+/**************** Bootstrap List Group Overrides ************************/
+
+.list-group-item {
+    font-weight: 400;
+    text-align: center
+}
+
+.clearfix.visible-lg-block.spacer {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+/**************** WP Archive pages ********************************************/
+
+
+
+
+
+
+/************************** Panel Styling ************************/
+
+
+
+/*************************** GEO CHART **********************************/
+.geoChart {
+	h3 {
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+	table {
+		font-weight: 400;
+		margin: 0 auto;
+	}
+}
+
+ 
+@media (max-width: 980px) {
+	.container {
+	    width: 100% !important;
+	} 
+	.inner-container {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+ 	.navbar {
+ 		.navbar-toggle {
+		    margin-top: 15px;
+		    margin-bottom: 15px;
+		}
+ 	}
+ 	.navbar-collapse {
+ 		 .navbar-nav > li > a {
+		    font-weight: 600;
+		    letter-spacing: 0.02em;
+		    padding-bottom: 15px;
+		    padding-top: 15px;
+		}
+ 	}
+
+	.bikeCategory {
+		header {
+			img {
+			    margin: 0 auto;
+			}	
+		}
+	}
+}	
+
+@media (max-width: 768px) {
+
+	.cx {
+	    margin-bottom: 10rem;
+	}
+	.bike-images {
+		.top {
+	    	margin-bottom: 3.5em;
+		    margin-top: 3.5em;
+		}
+	}
+	.index-bground {
+	    padding: 9em 2em;
+	}
+	.img-col img {
+	    margin: 3em auto;
+	}
+	img.imageStyle.resp-top.img-responsive {
+	    margin-bottom: 3.5em;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 991px) {
+  header .header_bg .globalStoemperZilla {
+    height: auto;
+    margin-left: -22%;
+    left: 62%;
+    top: 1%;
+    width: 18%;
+  }
+  .navbar .navLeft {
+    float: left;
+    margin: 5px 0 0 2%;
+  }
+  .navbar .navRight {
+    float: right;
+    margin: 5px 2% 0 0;
+  }
+}
+
+@media (max-width: 480px)  {
+	body {
+		font-size: 14px;
+	}
+	h1, .h1 {
+	    font-size: 32px;
+	}
+	h2, .h2 {
+	    font-size: 24px;
+	}
+	h3, .h3 {
+	    font-size: 19px;
+	}
+	h4, .h4 {
+	    font-size: 16px;
+	}
+	.navbar {
+	
+	}
+	.row {
+		&.bikes {
+		    margin-bottom: (@global-section-padding/2);
+		}
+		&.entry-content {
+		    margin-bottom: (@global-section-padding/2);
+		}
+		&.bike-images {
+		    margin-bottom: (@global-section-padding/2);
+		}
+		&.geo-section, &.features {
+		    margin-bottom: (@global-section-padding/2);
+		}
+	}
+	
+	.geoChart {
+	    overflow-x: scroll;
+	    max-width: 380px;
+	}
+	.cx {
+	    margin-bottom: 5rem;
+	}
+	.clearfix.visible-lg-block.spacer {
+	    padding-bottom: 1rem;
+	    padding-top: 1rem;
+	}
+}
+
+@media (max-width: 320px)  {
+
+}
+ 
+
+.archive.form-group .btn.btn-default {
+    margin: 1em 0 0;
+}
+
+.stoemper_form {
+	h3 {
+		margin-top:30px;
+		margin-bottom: 20px;
+	}
+	.control-label {
+	    font-size: 12px;
+	    padding: 0;
+	}
+}

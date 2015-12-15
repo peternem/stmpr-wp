@@ -1,0 +1,84 @@
+/********************************************************************/
+/**** Begin - WP Stoemper Global Header/ Navigation Stoemper - Domain wide *****/
+/********************************************************************/
+header {
+  .header_bg {
+    background: url("../image/stoemper-bground-sprite_01.jpg") no-repeat scroll center #000000;
+    height:80px;
+    .globalStoemperZilla {
+      height: 220px;
+      left: 50%;
+      margin-left: -109px;
+      position: absolute;
+      top: 5%;
+      width: 220px;
+      z-index: 888;
+    }
+  }
+}
+
+.navbar {
+  background: url("../image/stoemper-bground-sprite_02.jpg") no-repeat scroll center -1px #000;
+  margin-bottom: 0;
+  position: relative;
+  min-height: 50px;
+  
+  .navLeft {
+    float: left;
+    margin: 5px 0 0 25%;
+  }
+  
+  .navRight {
+    float: right;
+    margin: 5px 25% 0 0;
+  }
+}
+
+.menu {
+  padding:0;
+  .current-menu-item {
+    > a {
+      color: #FF9900;
+    }
+  }
+  .menu-item {
+    display: block;
+    float: left;
+    height: 40px;
+    margin: 0 5px 0 0;
+    
+    > a {
+      font-family: Arial,Helvetica,sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 10px;
+      display: block;
+      letter-spacing: 1px;
+      line-height: 32px;
+      padding: 5px;
+      text-transform: capitalize;
+    }
+    .sub-menu {
+      .menu-item {
+        float: none;
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}
+
+
+#menu_wrapper {
+  margin: 0px auto;
+  width: 100%;
+  height: 122px;
+  position: relative;
+  > nav {
+    background: url("../image/stoemper-bground-sprite_02.jpg") no-repeat scroll center #ccc;
+    bottom: 0;
+    height: 42px;
+    position: absolute;
+    width: 100%;
+    background-color: #333333;
+  }
+}

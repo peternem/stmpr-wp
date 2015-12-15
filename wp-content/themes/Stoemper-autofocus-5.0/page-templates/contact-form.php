@@ -90,7 +90,7 @@
 				</form>							
 					</div>
 				<div class="col-sm-12 col-md-4">
-					<img src="<?php bloginfo('url'); ?>/wp-content/uploads/2014/02/IMG_20130617_211859.jpg" class="img-responsive" />
+					<img src="/wp-content/uploads/2015/11/IMG_20130617_211859-600x.jpg" class="img-responsive" />
 				</div>
 			</div>
 			<div class="row">
