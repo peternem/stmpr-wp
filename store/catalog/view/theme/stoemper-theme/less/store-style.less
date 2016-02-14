@@ -151,6 +151,9 @@ body #colorbox, body #cboxOverlay, body #cboxWrapper {
 .box {
 	&.specials, &.paypal, &.latest, &.featured {
 	    margin-bottom: 4em;
+	    &:last-child {
+	    	margin: 0;
+	    }
 	}
 }
 .box-heading {
@@ -186,11 +189,13 @@ body #colorbox, body #cboxOverlay, body #cboxWrapper {
 
 /* Product Listing */
 
+.category-h1 {
+    //margin-bottom: 1em;
+}
+
 .category-info {
-	.image {
-	    // float: left;
-	    // margin-bottom: 1em;
-	    // margin-right: 1em;
+	&.row {
+	    margin-bottom: 2em;
 	}
 }
 
@@ -255,6 +260,12 @@ body #colorbox, body #cboxOverlay, body #cboxWrapper {
 	}
 }
 
+.orderInfo {
+	table.list {
+	    margin-bottom: 2em;
+	    width: 100%;
+	}
+}
 .checkout-content {
 	margin: 1em 0;
 	 overflow: auto;
@@ -296,18 +307,35 @@ body #colorbox, body #cboxOverlay, body #cboxWrapper {
     padding-left: 1em;
 }
 
+.stock {
+	color: red;
+}
 .success {
 	color: #3c763d;
 	font-weight: bold;
 }
 
+.compare-info {
+	font-size: 14px;
+	.img-responsive {
+	    margin: 0 auto;
+	    max-width: 180px;
+	}
+	.description {
+	    max-width: 180px;
+	}
+}
 @media (max-width: 980px) {
 	ul.media-list.cat_cta {
 	    margin-bottom: 4em;
 	}
+	
+	.row.cat_cta {
+	    margin-bottom: 4em;
+	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	.product-list  {
 		.image-col, .item-col, .price-col {
 		    margin-bottom: 2em;
@@ -320,6 +348,21 @@ body #colorbox, body #cboxOverlay, body #cboxWrapper {
 	
 	ul.media-list.cat_cta {
 	    margin-bottom: 4em;
+	}
+	
+	.content {
+	    margin-bottom: 4em;
+	}
+
+	.login-content.col-sm-12.col-md-4 {
+	    margin-bottom: 4em;
+	}
+	
+	.compare-info {
+	    font-size: 12px;
+	    .img-responsive {
+		    max-width: 100px;
+		}
 	}
 }
 
@@ -382,5 +425,20 @@ body #colorbox, body #cboxOverlay, body #cboxWrapper {
 	.product-compare {
 	    margin-bottom: 0;
 	}
+	
+	.col-md-12.compare-container {
+	    overflow: hidden;
+	    overflow-x: scroll;
+	}
+	
+	.cat_cta p {
+	    text-align: center;
+	}
 }
 
+
+@media (max-width: 320px) {
+	.navbar-brand img.img-responsive {
+	    max-width: 180px;
+	}
+}

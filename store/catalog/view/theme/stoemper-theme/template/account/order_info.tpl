@@ -7,12 +7,12 @@
 <div id="content" class="row">
 	<?php echo $content_top; ?>
 	<?php echo $column_left; ?>
-	<div id="content" class="col-md-8">
+	<div id="content" class="col-md-8 orderInfo">
 		<h1><?php echo $heading_title; ?></h1>
 		<table class="list">
 			<thead>
 				<tr>
-					<td class="left" colspan="2"><?php echo $text_order_detail; ?></td>
+					<td class="left" colspan="2"><b><?php echo $text_order_detail; ?></b></td>
 				</tr>
 			</thead>
 			<tbody>
@@ -36,9 +36,9 @@
 	 <table class="list">
 		    <thead>
 		      <tr>
-		        <td class="left"><?php echo $text_payment_address; ?></td>
+		        <td class="left"><b><?php echo $text_payment_address; ?></b></td>
 		        <?php if ($shipping_address) { ?>
-		        <td class="left"><?php echo $text_shipping_address; ?></td>
+		        <td class="left"><b><?php echo $text_shipping_address; ?></b></td>
 		        <?php } ?>
 		      </tr>
 		    </thead>
@@ -51,14 +51,14 @@
 		      </tr>
 		    </tbody>
 		  </table>
-		  <table class="list">
+		  <table class="list table">
 		    <thead>
 		      <tr>
-		        <td class="left"><?php echo $column_name; ?></td>
-		        <td class="left"><?php echo $column_model; ?></td>
-		        <td class="right"><?php echo $column_quantity; ?></td>
-		        <td class="right"><?php echo $column_price; ?></td>
-		        <td class="right"><?php echo $column_total; ?></td>
+		        <td class="left"><b><?php echo $column_name; ?></b></td>
+		        <td class="left"><b><?php echo $column_model; ?></b></td>
+		        <td class="right"><b><?php echo $column_quantity; ?></b></td>
+		        <td class="right"><b><?php echo $column_price; ?></b></td>
+		        <td class="right"><b><?php echo $column_total; ?></b></td>
 		        <?php if ($products) { ?>
 		        <td style="width: 1px;"></td>
 		        <?php } ?>
@@ -109,7 +109,7 @@
 		  <table class="list">
 		    <thead>
 		      <tr>
-		        <td class="left"><?php echo $text_comment; ?></td>
+		        <td class="left"><b><?php echo $text_comment; ?></b></td>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -121,7 +121,7 @@
 		  <?php } ?>
 		  <?php if ($histories) { ?>
 		  <h2><?php echo $text_history; ?></h2>
-		  <table class="list">
+		  <table class="list table">
 		    <thead>
 		      <tr>
 		        <td class="left"><?php echo $column_date_added; ?></td>

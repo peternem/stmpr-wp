@@ -117,13 +117,11 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
     </div>
 </div>
 <?php } ?>
-<div class="container">
-	<div class="row">
-		<div id="notification" class="col-md-12"></div>
-	</div>
-</div>
 <div id="container" class="container main_content">
 	<div id="content" class="inner-container">
+	<div class="row">
+		<div id="notification" class="notify col-md-12"></div>
+	</div>
 	<?php if ($categories) { ?>
 	<!-- <nav class="shop_menu">
 		<div class="row">

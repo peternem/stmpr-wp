@@ -12,11 +12,11 @@
 <?php } else { ?>
 	<div id="content" class="col-md-12">
 <?php } ?>
-		<h1><?php echo $heading_title; ?></h1>
+	<div class="category-info row">
   		<?php if ($thumb || $description) { ?>
-  		<div class="category-info row">
     		<?php if ($description) { ?>
     			<div class="col-md-8">
+    				<h1 class="category-h1"><?php echo $heading_title; ?></h1>
     				<?php echo $description; ?>
     			</div>
     		<?php } ?>
@@ -25,9 +25,13 @@
     				<img class="img-thumbnail" src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" />
     			</div>
 			<?php } ?>
-  		</div>
   		
-  <?php } ?>
+  		<?php } else { ?>
+			<div class="col-md-8">
+				<h1 class="category-h1"><?php echo $heading_title; ?></h1>
+			</div>
+		<? } ?>
+	</div>
   <?php if ($categories) { ?>
   <h2><?php echo $text_refine; ?></h2>
   <div class="category-list">

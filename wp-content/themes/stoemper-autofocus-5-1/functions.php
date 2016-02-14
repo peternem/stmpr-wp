@@ -5,6 +5,7 @@ register_nav_menu ('secondary', 'Secondary Menu');
 register_nav_menu ('footer', 'Footer Menu');
 register_nav_menu ('media', 'Media Menu');
 ?>
+
 <?php
 // Local dev live relaod content
 if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
