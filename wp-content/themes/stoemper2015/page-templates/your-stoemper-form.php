@@ -11,137 +11,137 @@
 
 <?php get_header() ?>
 <script>
-$( document ).ready(function() {
+jQuery( document ).ready(function() {
 
 	var list = new Array("0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00" , "0.00");
 	
 	var flag = null;
-	$('#frameModel').change(function () {
-		console.log( $('#frameModel').val() );
-		flag = $('#frameModel').val()
+	jQuery('#frameModel').change(function () {
+		console.log( jQuery('#frameModel').val() );
+		flag = jQuery('#frameModel').val()
 
 // 		if(flag=="Ronny") {
-// 			$("#bottomBracket" ).prop('selectedIndex',0);
-// 			$("#bottomBracket option[value='PF30']").attr("disabled","true");
+// 			jQuery("#bottomBracket" ).prop('selectedIndex',0);
+// 			jQuery("#bottomBracket option[value='PF30']").attr("disabled","true");
 // 		} else {
-// 			$("#bottomBracket" ).prop('selectedIndex',0);
-// 			$("#bottomBracket option[value='PF30']").prop('disabled', false);
+// 			jQuery("#bottomBracket" ).prop('selectedIndex',0);
+// 			jQuery("#bottomBracket option[value='PF30']").prop('disabled', false);
 // 		}
-		var id = $(this).find(':selected').attr('data-price')
-	 	//var id = $(this).val();
+		var id = jQuery(this).find(':selected').attr('data-price')
+	 	//var id = jQuery(this).val();
         //var dataString = 'id='+ id;
-       // $('#estimate').val(id);
+       // jQuery('#estimate').val(id);
        	//var output = list.push(0,id); 
        	var output = list[0] = id
         console.log(list);
 
-    	var sum = $.sum(list);
+    	var sum = jQuery.sum(list);
        	console.log(sum);
-        $('#estimate').val("$" + sum);
+        jQuery('#estimate').val("$" + sum);
         return false;
 	});
 
-	$('#internalGearCbl').change(function () {
-		var id = $(this).find(':selected').attr('data-price') 
+	jQuery('#internalGearCbl').change(function () {
+		var id = jQuery(this).find(':selected').attr('data-price') 
        	var output = list[1] = id
         console.log(list);
 
-		var sum = $.sum(list);
+		var sum = jQuery.sum(list);
 		console.log(sum);
-		$('#estimate').val("$" + sum);
+		jQuery('#estimate').val("$" + sum);
         return false;
 	});
 	
-	$('#intergratedSeatPost').change(function () {
-		var id = $(this).find(':selected').attr('data-price') 
+	jQuery('#intergratedSeatPost').change(function () {
+		var id = jQuery(this).find(':selected').attr('data-price') 
        	var output = list[2] = id
         console.log(list);
 
-		var sum = $.sum(list);
+		var sum = jQuery.sum(list);
 		console.log(sum);
-		$('#estimate').val("$" + sum);
+		jQuery('#estimate').val("$" + sum);
         return false;
 	});
 
-	$('#handleBarBrand').change(function () {
-		var id = $(this).find(':selected').attr('data-price') 
+	jQuery('#handleBarBrand').change(function () {
+		var id = jQuery(this).find(':selected').attr('data-price') 
        	var output = list[3] = id
         console.log(list);
 
-		var sum = $.sum(list);
+		var sum = jQuery.sum(list);
 		console.log(sum);
-		$('#estimate').val("$" + sum);
+		jQuery('#estimate').val("$" + sum);
         return false;
 	});
 	
-	$('#headsetBrand').change(function () {
-		var id = $(this).find(':selected').attr('data-price') 
+	jQuery('#headsetBrand').change(function () {
+		var id = jQuery(this).find(':selected').attr('data-price') 
        	var output = list[4] = id
         console.log(list);
 
-		var sum = $.sum(list);
+		var sum = jQuery.sum(list);
 		console.log(sum);
-		$('#estimate').val("$" + sum);
+		jQuery('#estimate').val("$" + sum);
         return false;
 	});
 	
-	$('#bbBrand').change(function () {
-		var id = $(this).find(':selected').attr('data-price') 
+	jQuery('#bbBrand').change(function () {
+		var id = jQuery(this).find(':selected').attr('data-price') 
        	var output = list[5] = id
         console.log(list);
 
-		var sum = $.sum(list);
+		var sum = jQuery.sum(list);
 		console.log(sum);
-		$('#estimate').val("$" + sum);
+		jQuery('#estimate').val("$" + sum);
         return false;
 	});
 
-	$('#wheelSetBrand').change(function () {
-		var id = $(this).find(':selected').attr('data-price') 
+	jQuery('#wheelSetBrand').change(function () {
+		var id = jQuery(this).find(':selected').attr('data-price') 
        	var output = list[6] = id
         console.log(list);
 
-		var sum = $.sum(list);
+		var sum = jQuery.sum(list);
 		console.log(sum);
-		$('#estimate').val("$" + sum);
+		jQuery('#estimate').val("$" + sum);
         return false;
 	});
 	
-	$('#seatPostBrand').change(function () {
-		var id = $(this).find(':selected').attr('data-price') 
+	jQuery('#seatPostBrand').change(function () {
+		var id = jQuery(this).find(':selected').attr('data-price') 
        	var output = list[7] = id
         console.log(list);
 
-		var sum = $.sum(list);
+		var sum = jQuery.sum(list);
 		console.log(sum);
-		$('#estimate').val("$" + sum);
+		jQuery('#estimate').val("$" + sum);
         return false;
 	});
-	$('#stemBrand').change(function () {
-		var id = $(this).find(':selected').attr('data-price') 
+	jQuery('#stemBrand').change(function () {
+		var id = jQuery(this).find(':selected').attr('data-price') 
        	var output = list[8] = id
         console.log(list);
 
-		var sum = $.sum(list);
+		var sum = jQuery.sum(list);
 		console.log(sum);
-		$('#estimate').val("$" + sum);
+		jQuery('#estimate').val("$" + sum);
         return false;
 	});
 
-	$('#pumpBrand').change(function () {
-		var id = $(this).find(':selected').attr('data-price') 
+	jQuery('#pumpBrand').change(function () {
+		var id = jQuery(this).find(':selected').attr('data-price') 
        	var output = list[9] = id
         console.log(list);
 
-		var sum = $.sum(list);
+		var sum = jQuery.sum(list);
 		console.log(sum);
-		$('#estimate').val("$" + sum);
+		jQuery('#estimate').val("$" + sum);
         return false;
 	});
 	
-	$.sum = function(arr) {
+	jQuery.sum = function(arr) {
 	    var r = 0;
-	    $.each(arr, function(i, v) {
+	    jQuery.each(arr, function(i, v) {
 	        r += parseInt(v);
 	    });
 	    return r;
